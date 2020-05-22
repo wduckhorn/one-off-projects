@@ -1,0 +1,11 @@
+CC = g++
+CFLAGS = -c -Wall
+all: main
+
+main: proj5.o MyString.o
+	$(CC) proj5.o MyString.o -o proj5
+proj5.o: proj5.cpp MyString.h
+	$(CC) $(CFLAGS) proj5.cpp
+MyString.o: MyString.cpp MyString.h
+	$(CC) $(CFLAGS) MyString.cpp
+

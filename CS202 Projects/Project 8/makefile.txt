@@ -1,0 +1,12 @@
+CC = g++
+CFLAGS = -c -Wall
+all: main
+
+main: proj8.o VectorRecursion.o
+	$(CC) proj8.o VectorRecursion.o -o proj8
+proj8.o: proj8.cpp VectorRecursion.h
+	$(CC) $(CFLAGS) proj8.cpp
+VectorRecursion.o: VectorRecursion.cpp VectorRecursion.h
+	$(CC) $(CFLAGS) VectorRecursion.cpp
+
+
